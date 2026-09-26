@@ -1,0 +1,41 @@
+/* *{
+    margin: 0;
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+}
+
+.center{
+    width: 80%;
+    margin: auto;
+}
+
+.center h3,
+.center h4{
+    background-color: gray;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.center input{
+    width: 99.4%;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+.center button{
+    width: 100%;
+    background-color: gray;
+    padding: 10px;
+    color: white;
+    border: none;
+} */
+
+.active{
+    text-decoration: none;
+    color: navy;
+    font-weight: bold;
+}
