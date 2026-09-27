@@ -8,7 +8,7 @@ export default function BootstrapExample() {
       basePrice: 8900,
       discount: 50,
       finalPrice: 4450,
-      pic: "",
+      pic: "/images/pic1.jpg",
     },
     {
       id: 1002,
@@ -16,7 +16,7 @@ export default function BootstrapExample() {
       basePrice: 8900,
       discount: 50,
       finalPrice: 4450,
-      pic: "",
+      pic: "/images/pic2.jpg",
     },
     {
       id: 1003,
@@ -24,7 +24,7 @@ export default function BootstrapExample() {
       basePrice: 8900,
       discount: 50,
       finalPrice: 4450,
-      pic: "",
+      pic: "/images/pic3.jpg",
     },
     {
       id: 1004,
@@ -32,7 +32,7 @@ export default function BootstrapExample() {
       basePrice: 8900,
       discount: 50,
       finalPrice: 4450,
-      pic: "",
+      pic: "/images/pic4.jpg",
     },
     {
       id: 1005,
@@ -40,7 +40,7 @@ export default function BootstrapExample() {
       basePrice: 8900,
       discount: 50,
       finalPrice: 4450,
-      pic: "",
+      pic: "/images/pic5.jpg",
     },
     {
       id: 1006,
@@ -48,7 +48,7 @@ export default function BootstrapExample() {
       basePrice: 8900,
       discount: 50,
       finalPrice: 4450,
-      pic: "",
+      pic: "/images/pic6.jpg",
     },
     {
       id: 1007,
@@ -56,7 +56,7 @@ export default function BootstrapExample() {
       basePrice: 8900,
       discount: 50,
       finalPrice: 4450,
-      pic: "",
+      pic: "/images/pic7.jpg",
     },
     {
       id: 1008,
@@ -64,7 +64,7 @@ export default function BootstrapExample() {
       basePrice: 8900,
       discount: 50,
       finalPrice: 4450,
-      pic: "",
+      pic: "/images/pic8.jpg",
     },
     {
       id: 1009,
@@ -72,7 +72,7 @@ export default function BootstrapExample() {
       basePrice: 8900,
       discount: 50,
       finalPrice: 4450,
-      pic: "",
+      pic: "/images/pic9.jpg",
     },
     {
       id: 1010,
@@ -80,7 +80,7 @@ export default function BootstrapExample() {
       basePrice: 8900,
       discount: 50,
       finalPrice: 4450,
-      pic: "",
+      pic: "/images/pic10.jpg",
     },
     {
       id: 1011,
@@ -88,7 +88,7 @@ export default function BootstrapExample() {
       basePrice: 8900,
       discount: 50,
       finalPrice: 4450,
-      pic: "",
+      pic: "/images/pic11.jpg",
     },
     {
       id: 1012,
@@ -96,7 +96,7 @@ export default function BootstrapExample() {
       basePrice: 8900,
       discount: 50,
       finalPrice: 4450,
-      pic: "",
+      pic: "/images/pic12.jpg",
     },
     {
       id: 1013,
@@ -104,7 +104,7 @@ export default function BootstrapExample() {
       basePrice: 8900,
       discount: 50,
       finalPrice: 4450,
-      pic: "",
+      pic: "/images/pic13.jpg",
     },
     {
       id: 1014,
@@ -112,7 +112,7 @@ export default function BootstrapExample() {
       basePrice: 8900,
       discount: 50,
       finalPrice: 4450,
-      pic: "",
+      pic: "/images/pic14.jpg",
     },
     {
       id: 1015,
@@ -120,7 +120,7 @@ export default function BootstrapExample() {
       basePrice: 8900,
       discount: 50,
       finalPrice: 4450,
-      pic: "",
+      pic: "/images/pic15.jpg",
     },
     {
       id: 1016,
@@ -128,7 +128,7 @@ export default function BootstrapExample() {
       basePrice: 8900,
       discount: 50,
       finalPrice: 4450,
-      pic: "",
+      pic: "/images/pic16.jpg",
     },
     {
       id: 1017,
@@ -136,7 +136,7 @@ export default function BootstrapExample() {
       basePrice: 8900,
       discount: 50,
       finalPrice: 4450,
-      pic: "",
+      pic: "/images/pic17.jpg",
     },
     {
       id: 1018,
@@ -144,7 +144,7 @@ export default function BootstrapExample() {
       basePrice: 8900,
       discount: 50,
       finalPrice: 4450,
-      pic: "",
+      pic: "/images/pic18.jpg",
     },
     {
       id: 1019,
@@ -152,7 +152,7 @@ export default function BootstrapExample() {
       basePrice: 8900,
       discount: 50,
       finalPrice: 4450,
-      pic: "",
+      pic: "/images/pic19.jpg",
     },
     {
       id: 1020,
@@ -160,7 +160,7 @@ export default function BootstrapExample() {
       basePrice: 8900,
       discount: 50,
       finalPrice: 4450,
-      pic: "",
+      pic: "/images/pic20.jpg",
     },
   ];
   return (
@@ -470,27 +470,24 @@ export default function BootstrapExample() {
         </h5>
       </div>
 
-      <div>
+      <div className="row">
         {data.map((item) => {
-          return (
-            <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+          return <div className='col-xl-2 col-lg-3 col-md-4 col-sm-6'>
               <div>
                 <div className="card">
-                  <img src="..." className="card-img-top" alt="..." />
+                  <img src={item.pic} height={200} className="card-img-top" alt="..." />
                   <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card’s content.
+                    <h5 className="card-title">{item.name}</h5>
+                    <p className="card-text"><del>&#8377;{item.basePrice}</del>&#8377;{item.finalPrice} <sup>{item.discount}% off</sup>
+                      
                     </p>
-                    <a href="#" className="btn btn-primary">
-                      Go somewhere
+                    <a href="#" className="btn btn-dark w-100">
+                      Add to Cart
                     </a>
                   </div>
                 </div>
               </div>
             </div>
-          );
         })}
       </div>
     </>
